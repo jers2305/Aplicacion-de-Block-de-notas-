@@ -1,0 +1,13 @@
+<div class="container mt-3">
+  <!-- Aquí el contenido de baja prioridad -->
+  <ul class="list-group">
+    <li *ngFor="let tarea of tareas" class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <span [class]="tarea.prioridad"></span>
+        <span>{{ tarea.descripcion }}</span>
+        <span class="text-muted">{{ tarea.fecha }}</span>
+      </div>
+      <button class="btn btn-danger btn-sm" (click)="removeTarea(tarea.id)">X</button>
+    </li>
+  </ul>
+</div>

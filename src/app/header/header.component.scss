@@ -1,0 +1,89 @@
+.navbar {
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #343a40;
+  overflow-x: hidden;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  padding: 20px;
+  color: white;
+}
+
+.sidebar-item {
+  padding: 10px 15px;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-item:hover {
+  opacity: 0.8;
+}
+
+.sidebar-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+
+.btn.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.btn.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.btn.btn-success {
+  background-color: #28a745;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.btn.btn-light {
+  background-color: #f8f9fa;
+  border: none;
+  color: black;
+  width: 100%;
+  text-align: left;
+}
+
+.btn.btn-danger.btn-sm {
+  background-color: #dc3545;
+  color: white;
+  margin-bottom: 15px;
+}

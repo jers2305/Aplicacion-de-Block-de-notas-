@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="mr-auto">
+    <button class="btn btn-secondary" type="button" (click)="toggleNav()">
+      Menú
+    </button>
+  </div>
+  <span class="navbar-text mx-auto">{{ title }}</span>
+  <button class="btn btn-outline-light" [routerLink]="['/usuario']">
+    <i class="bi bi-person-circle"></i> Usuario
+  </button>
+</nav>
+<div class="sidebar" [ngClass]="{'active': showNav}">
+  <div class="sidebar-content">
+    <button class="btn btn-danger btn-sm mb-3" (click)="toggleNav()">Cerrar</button>
+    <a class="sidebar-item btn btn-light" [routerLink]="['/']" (click)="toggleNav()">Inicio</a>
+    <a class="sidebar-item btn btn-danger" [routerLink]="['/alta']" (click)="toggleNav()">Prioridad alta</a>
+    <a class="sidebar-item btn btn-warning" [routerLink]="['/media']" (click)="toggleNav()">Prioridad media</a>
+    <a class="sidebar-item btn btn-success" [routerLink]="['/baja']" (click)="toggleNav()">Prioridad baja</a>
+    <div class="sidebar-divider"></div>
+    <a class="sidebar-item btn btn-light" [routerLink]="['/usuario']" (click)="toggleNav()">Usuario</a>
+  </div>
+</div>

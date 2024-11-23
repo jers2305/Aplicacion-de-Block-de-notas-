@@ -1,0 +1,30 @@
+.container {
+  margin-bottom: 80px; // Ajuste para el espacio del botón fijo
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-priority-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}

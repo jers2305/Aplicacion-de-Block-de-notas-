@@ -11,7 +11,7 @@ export class TareasService {
     { id: 3, titulo: 'Tarea 3', descripcion: 'Descripción 3', fecha: '2023-11-24', prioridad: 'baja' }
   ];
 
-  private currentId: number = 3;
+  private currentId: number = 3; // Mantener un contador de ID único
 
   constructor() { }
 
@@ -19,12 +19,16 @@ export class TareasService {
     return this.tareas;
   }
 
+  getTareaById(id: number): Tarea | undefined {
+    return this.tareas.find(tarea => tarea.id === id);
+  }
+
   eliminarTarea(id: number): void {
     this.tareas = this.tareas.filter(tarea => tarea.id !== id);
   }
 
   addTarea(tarea: Tarea): void {
-    this.currentId++;
+    this.currentId++; // Incrementar el ID único
     tarea.id = this.currentId;
     this.tareas.push(tarea);
   }

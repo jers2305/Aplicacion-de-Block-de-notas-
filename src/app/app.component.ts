@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router'; // Importa Router y NavigationEnd
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +17,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   pageTitle: string = 'Inicio';
 
   constructor(private router: Router) { // Inyección de dependencia para Router
@@ -26,6 +26,13 @@ export class AppComponent {
         this.updatePageTitle(event.urlAfterRedirects);
       }
     });
+  }
+
+  ngOnInit() {
+    const username = localStorage.getItem('username');
+    if (!username) {
+      this.router.navigate(['/login']);
+    }
   }
 
   updatePageTitle(url: string): void {
